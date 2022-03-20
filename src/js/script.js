@@ -325,7 +325,7 @@
     constructor (element){
       const thisCart = this;
 
-      thisCart.product = [];
+      thisCart.products = [];
 
       thisCart.getElements(element);
       thisCart.initActions();
