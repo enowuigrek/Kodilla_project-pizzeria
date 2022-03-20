@@ -99,6 +99,9 @@
       thisProduct.initOrderForm();
       thisProduct.initAmountWidget();
       thisProduct.processOrder();
+      thisProduct.prepareCartProduct()
+      thisProduct.prepareCartProductParams();
+
     }
 
     renderInMenu(){
@@ -166,7 +169,6 @@
         thisProduct.processOrder();
         thisProduct.addToCart();
       });
-
     }
 
     processOrder(){
@@ -212,7 +214,6 @@
       const thisProduct = this;
 
       app.cart.add(thisProduct.prepareCartProduct());
-
     }
 
     prepareCartProduct(){
@@ -258,9 +259,6 @@
         
     }
   }
-    
-
-  
 
   class AmountWidget{
     constructor(element){
@@ -272,8 +270,8 @@
       thisWidget.setValue(thisWidget.input.value);
       thisWidget.initActions();
 
-      console.log('AmountWidget:', thisWidget);
-      console.log('constructor arguments:', element);
+      // console.log('AmountWidget:', thisWidget);
+      // console.log('constructor arguments:', element);
     }
 
     getElements(element){
@@ -352,16 +350,18 @@
       });
     }
 
-    add (menuProduct){
+    add(menuProduct){
       const thisCart = this;
 
       const generatedHTML = templates.cartProduct(menuProduct);
       const generatedDOM = utils.createDOMFromHTML(generatedHTML);
+
       thisCart.dom.productList.appendChild(generatedDOM);
 
+      thisCart.products.push(menuProduct);
+      console.log('thisCart.products', thisCart.products);
     }
   }
-
 
   const app = {
     initMenu: function(){
@@ -383,7 +383,7 @@
     initData: function(){
       const thisApp = this;
 
-      thisApp.data = dataSource;
+      thisApp.data = dataSource; 
     },
 
     init: function(){
