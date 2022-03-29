@@ -33,7 +33,7 @@
         "autoprefixer": "^10.2.4",
         "browser-sync": "^2.26.3",
         "copyfiles": "^2.1.0",
-        "eslint": "^8.12.0",
+        "eslint": "^5.14.1",
         "globstar": "^1.0.0",
         "html-validate": "^6.6.1",
         "mkdirp": "^0.5.1",
@@ -43,7 +43,7 @@
         "postcss-cli": "^8.3.1",
         "rimraf": "^3.0.2",
         "sass": "^1.44.0",
-        "stylelint": "^14.6.1",
+        "stylelint": "^9.10.1",
         "stylelint-scss": "^3.5.4"
     },
     "dependencies": {
