@@ -438,8 +438,6 @@
         products: []
       };
 
-      console.log (payload);
-
       for(let prod of thisCart.products) {
         payload.products.push(prod.getData());
       }
@@ -566,12 +564,10 @@
           return rawResonse.json();
         })
         .then(function(parsedResponse){
-          console.log('parsedResponse', parsedResponse);
 
           thisApp.data.products = parsedResponse;
           thisApp.initMenu();
         });
-      console.log('thisapp.data', JSON.stringify(thisApp.data));
     },
 
     init: function(){
