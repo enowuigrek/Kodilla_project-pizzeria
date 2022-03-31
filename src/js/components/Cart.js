@@ -1,4 +1,4 @@
-import {settings, select, templates, classNames,} from '../settings.js';
+import {settings, select, templates, classNames} from '../settings.js';
 import utils from '../utils.js';
 import CartProduct from './CartProduct.js';
 
@@ -114,7 +114,7 @@ class Cart {
       totalPrice: thisCart.totalPrice,
       subtotalPrice: thisCart.subtotalPrice,
       totalNumber: thisCart.totalNumber,
-      deliveryFee: thisCart.DeliveryFee,
+      deliveryFee: thisCart.deliveryFee,
       products: []
     };
 
