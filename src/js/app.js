@@ -1,6 +1,7 @@
 import {settings, select, classNames, templates} from './settings.js';
 import Product from './components/Product.js';
 import Cart from './components/Cart.js';
+import Booking from './components/Booking.js';
 
 const app = {
   initPages: function (){
@@ -18,7 +19,7 @@ const app = {
         pageMatchingHash = page.id;
         break;
       }
-    };
+    }
 
     thisApp.activatePage(pageMatchingHash);
 
@@ -35,7 +36,7 @@ const app = {
         window.location.hash = '#/' + id;
 
       });
-    };
+    }
 
   },
 
@@ -62,7 +63,7 @@ const app = {
 
     for (let productData in thisApp.data.products){
       new Product(thisApp.data.products[productData].id, thisApp.data.products[productData]);
-    };
+    }
   },
 
   initCart: function(){
@@ -95,6 +96,13 @@ const app = {
       });
   },
 
+  initBooking: function(){
+    const thisApp = this;
+
+    const bookingPage = document.querySelector(select.containerOf.booking);
+    thisApp.booking = new Booking(bookingPage);
+  },
+
   init: function(){
     const thisApp = this;
     console.log('*** App starting ***');
@@ -106,6 +114,7 @@ const app = {
     thisApp.initPages();
     thisApp.initData();
     thisApp.initCart();
+    thisApp.initBooking();
   },
 
 };
