@@ -63,9 +63,10 @@ export const select = {
     tables: '.floor-plan .table',
     floorPlan: '.floor-plan',
     phone: 'input[name="phone"]',
-    adress: 'input[name="address"]',
+    address: 'input[name="address"]',
     starters: '.booking-form [name="starter"]',
     form:'.order-confirmation [type="submit"]',
+    submitForm: '.btn-secondary'
   },
   nav: {
     links: '.main-nav a',

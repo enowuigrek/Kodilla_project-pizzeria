@@ -3,7 +3,7 @@ import utils from '../utils.js';
 import CartProduct from './CartProduct.js';
 
 class Cart {
-  constructor (element){
+  constructor(element){
     const thisCart = this;
 
     thisCart.products = [];
@@ -12,7 +12,7 @@ class Cart {
     thisCart.initActions();
   }
 
-  getElements (element) {
+  getElements(element) {
     const thisCart = this;
 
     thisCart.dom = {};
