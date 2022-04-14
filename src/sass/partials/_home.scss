@@ -1,0 +1,200 @@
+#pages {
+  > * {
+    display: none;
+  }
+
+  > .active {
+    display: block;
+  }
+}
+
+.home-widget {
+  transform: opacity 500ms;
+
+  &.loading {
+    opacity: 0.25;
+  }
+}
+
+.home-wrapper {
+  margin: ($base-size * 3.5) auto;
+  padding: ($base-size * 6) ($base-size * 4);
+  background: $color-light;
+  border-bottom: 1px solid lighten($color-dark, 70%);
+  border-radius: $radius;
+}
+
+/* Tiles */
+
+.home-tiles {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+.tile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  height: 140px;
+  border-radius: 4px;
+  flex: 1;
+  margin: 3px;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.order{
+  background-image: url(/images/home/pizza-1.jpg);
+}
+
+.booking{
+  background-image: url(/images/home/pizza-2.jpg);
+}
+
+.opening{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 140px;
+  border-radius: 4px;
+  background-color: $color-main;
+  flex: 100%;
+}
+
+.tile-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.tile-text-top{
+  display: flex;
+  flex-direction: column;
+  font-family: $font-header;
+  align-items: center;
+  color: white;
+  margin: 0;
+
+  h1, p {
+    margin: 0;
+    transition: 0.6s;
+  }
+
+  h1{
+    font-size: 34px;
+  }
+
+  p{
+    color: transparent;
+  }
+
+  h1:hover{
+    transform: translate(0px, -10px);
+  }
+
+  p:hover{
+    color: $color-light;
+  }
+}
+
+.tile-text{
+  display: flex;
+  flex-direction: column;
+  font-family: $font-header;
+  align-items: center;
+  color: white;
+  margin: 0;
+
+  h1, p{
+    margin: 0;
+  }
+
+  h1{
+    font-size: 34px;
+  }
+}
+
+/* Carousel */
+  
+.carousel-item  {
+  display: flex;
+}
+
+.carousel-image {
+  width: 180px;
+  height: 180px;
+  margin: 3px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.carousel-caption {
+  margin-left: 40px;
+  text-align: left;
+  color: black;
+}
+
+/* Gallery */
+
+.gallery{
+  margin-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gallery-item{
+  position: relative;
+  display: flex;
+  width: 180px;
+  height: 180px;
+  border-radius: 5px;
+  margin: 3px;
+  flex: 30%;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-image{
+  position: relative;
+  width: 180px;
+  height: 180px;
+  border-radius: 5px;
+  object-fit: cover;
+  transition: 0.3s;
+
+  &:hover {
+    filter: alpha(opacity=70);
+    -moz-opacity: 0.7;
+    opacity: 0.7;
+  }
+
+}
+
+.gallery-icons{
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  color: $color-light;
+  font-size: 26px;
+
+  i{
+    transition: 1s;
+    margin: 5px;
+
+    &:hover{
+      color: $color-main;
+    }
+  }
+}
+
+/* Instagram */
+
+.instagram{
+  display: block;
+  padding: 12px 0;
+  color: $color-main;
+}
