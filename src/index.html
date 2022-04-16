@@ -13,7 +13,6 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
   <header class="header">
     <div class="container">
       <div class="header__wrapper">
@@ -74,10 +73,7 @@
     </section>
   </div>
   <script id="template-home-widget" type="text/x-handlebars-template">
-
     <div class="home-tiles">
-
-
         <div class="tile order top">
           <a class="link" href="#order">
             <div class="tile-text-top">
@@ -86,7 +82,6 @@
             </div>
           </a>
         </div>
-
         <div class="tile booking top">
           <a class="link" href="#booking">
             <div class="tile-text-top">
@@ -101,12 +96,9 @@
             <p>TUE - SUN 12PM - 12AM</p>
           </div>
         </div>
-
-    </div>
-
+      </div>
     <div class="carousel">
-
-      <div class="main-carousel" data-flickity='{ "autoPlay": true }'>
+      <div class="main-carousel" data-flickity='{"autoPlay": true, "groupCells": false}'>
         <div class="carousel-item active">
           <img class="carousel-image" src="images/home/pizza-3.jpg">
           <div class="carousel-caption">
@@ -130,7 +122,6 @@
         </div>
      </div> 
     </div>
-
     <div class="gallery">
       <div class="gallery-item">
         <img src="images/home/pizza-4.jpg" class="gallery-image">
@@ -176,7 +167,6 @@
       </div>
     </div>
     <a class="instagram" href="#">Viev more on Instagram</a>
-
   </script>
   <script id="template-cart-product" type="text/x-handlebars-template">
     <li>
@@ -205,7 +195,6 @@
       </ul>
     </li>
   </script>
-
   <script id="template-menu-product" type="text/x-handlebars-template">
     <article class="product"> <!-- product -->
 
@@ -294,8 +283,8 @@
             <input type="text" name="date">
           </div>
           <div class="hour-picker range-slider">
-              <div class="output"></div>
-              <label class="booking-option-title">Pick a time</label>
+            <div class="output"></div>
+            <label class="booking-option-title">Pick a time</label>
             <input type="range" name="hour" value="12" min="12" max="24" step="0.5">
           </div>
         </div>
